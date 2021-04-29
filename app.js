@@ -72,7 +72,9 @@ app.post("/", upload.single("file"), (req, res) => {
     } else if (jasonData.active === true) {
       listOfIDs.push(jasonData.id);
       console.log(jasonData.name[0].text);
-      jasonData.facility.map((facility)=>{console.log(facility.name)})
+      jasonData.facility.map((facility) => {
+        console.log(facility.name);
+      });
       res.status(200).send("Information printed in console");
     } else {
       res.status(400).send("No data to process");
